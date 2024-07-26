@@ -1,8 +1,10 @@
+import { Main } from "@/components/Main";
+import { MainCard } from "@/components/MainCard/MainCard";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24 bg-[#1E1E1E]">
-      
-    </main>
+    <Main>
+      <MainCard className="col-span-12 md:col-span-10"/>
+    </Main>
   );
 }
