@@ -69,15 +69,11 @@ body {
   animation-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 
-/* tooltip icon name */
-.tippy-tooltip.custom-theme {
-  background-color: rgba(0, 0, 0, 0.8); 
+.tippy-box[data-theme~='custom-theme'] {
+  background-color: rgb(0, 0, 0);
+  opacity: 80%;  
   color: white;
-  border-radius: 4px; 
-  padding: 5px 10px;
+  border-radius: 5px; 
+  padding: 1px;
   font-size: 0.875rem;
-}
-
-.tippy-box[data-theme~="custom-theme"] {
-  transition: opacity 0.2s ease-out;
 }

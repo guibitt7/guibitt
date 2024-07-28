@@ -7,7 +7,7 @@ import { SocialLinks } from "../SocialLinks";
 export function MainCard({...props}: ComponentProps<"div">) {
     return (
       <section className={twMerge(
-        "relative flex h-48 w-full flex-row gap-2 rounded-lg backdrop-blur",
+        "relative flex h-56 w-full flex-row gap-2 rounded-lg backdrop-blur",
         props.className
       )}>
         <div className={twMerge(
@@ -18,8 +18,8 @@ export function MainCard({...props}: ComponentProps<"div">) {
             fill
             quality={70}
             priority={true}
-            src="/foto.jpg"
-            className="z-20 flex select-none object-cover opacity-80"
+            src="/guibitt1.jpg"
+            className="z-10 flex select-none object-cover opacity-80"
             alt="gui photo"
             placeholder="empty"
             sizes="(max-width: 768px) 250px, (max-width: 1200px) 350px, 400px"

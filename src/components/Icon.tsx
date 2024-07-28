@@ -5,7 +5,7 @@ import { HTMLProps } from "react";
 import { twMerge } from "tailwind-merge";
 import Image from "next/image";
 import Tippy from "@tippyjs/react";
-import "tippy.js/dist/tippy.css"; // Importa o CSS do Tippy
+import "tippy.js/dist/tippy.css"; 
 
 
 
@@ -21,13 +21,14 @@ export function IconLink({ src, tooltip, ...props }: IconProps & HTMLProps<HTMLA
       theme="custom-theme"
       duration={[100, 100]}
       delay={[0, 50]}
+      className="text-blue"
     >
       <Link
         id={`nav-item-${props.id}`}
         href={props.href || "/"}
         target={"_blank" || props.target}
         rel="noopener noreferrer"
-        className={twMerge("select-none text-center text-black spring-animation", props.className)}
+        className={twMerge("select-none text-center spring-animation", props.className)}
       >
         <Image
           width={100}

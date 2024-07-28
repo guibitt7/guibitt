@@ -1,5 +1,7 @@
-
-
+export const BRtime = new Intl.DateTimeFormat('pt-BR', {
+    hour: 'numeric',
+    minute: 'numeric'
+  })
 
 
 
