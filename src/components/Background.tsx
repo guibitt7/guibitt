@@ -1,4 +1,3 @@
-
 export function Backgorund() {
     return(
         <>

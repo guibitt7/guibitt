@@ -8,11 +8,7 @@ type MainProps = ComponentProps<"main"> & {
 
 export async function Main({ children, ...props }: MainProps) {
   return (
-    <main className={twMerge(
-      "flex items-center justify-center min-h-screen p-4",
-      "container relative z-10 w-full max-w-[48rem] pb-40 pt-16",
-      props.className
-    )}>
+    <main className={twMerge("container relative z-10 w-full max-w-[70rem] pb-40 pt-16", props.className)}>
       <Motion>{children}</Motion>
     </main>
   );
