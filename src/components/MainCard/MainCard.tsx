@@ -27,7 +27,7 @@ export function MainCard({...props}: ComponentProps<"div">) {
         </div>
 
         <div className={twMerge("flex w-full flex-col items-center justify-center"
-            
+        
         )}>
             <h1 className={twMerge(
             "hover:underline flex select-none text-3xl mt-6 text-center justify-center items-center font-mclaren text-violet-200",

@@ -3,7 +3,7 @@ export const BRtime = new Intl.DateTimeFormat('pt-BR', {
     minute: 'numeric'
   })
 
-
+  // 422103990214459412
 
 export const github_url = "https://github.com/guibitt7";
 export const linkedin_url = "https://www.linkedin.com/in/guibitt7/";

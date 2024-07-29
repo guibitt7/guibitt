@@ -25,17 +25,17 @@ export function Time() {
   const altText = isNight ? "Night time" : "Day time";
 
   return (
-    <div className="center relative flex h-full items-center justify-center rounded-lg bg-violet-300/40">
+    <div className="relative flex h-full items-center justify-center rounded-lg">
       <Image
         fill
         sizes="100"
         quality={90}
         src={imageSrc}
-        className="z-10 w-full select-none rounded-md object-cover opacity-80"
+        className="z-10 w-full select-none rounded-md object-cover opacity-70"
         alt={altText}
       />
 
-      <div className="z-20 select-none text-center font-semibold text-pink-200">
+      <div className="z-20 select-none text-center font-semibold text-violet-200">
         <h2 className="text-2xl">
           {hours}
           <span className="">:</span>
