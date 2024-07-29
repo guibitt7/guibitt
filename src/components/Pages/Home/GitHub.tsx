@@ -5,14 +5,17 @@ import {github_url} from "@/utils/Consts";
 import { BsGithub } from "react-icons/bs";
 
 
+interface GitHubProps {
+    className?: string;
+}
 
-export function GitHub(){
-    return(
+export function GitHub({ className }: GitHubProps) {
+    return (
         <Link
-        href={github_url}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="relative h-44 w-full glow flex rounded-md backdrop-blur hover:brightness-90"
+            href={github_url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`relative h-44 w-full glow flex rounded-md backdrop-blur hover:brightness-90 ${className}`}
         >
             <Image
                 fill
@@ -26,7 +29,7 @@ export function GitHub(){
 
             <span className="absolute bottom-2 sm:top-4 left-4 w-full -space-y-1 font-mclaren select-none text-left">
                 <span className="display text-base font-bold text-pink-200 sm:block md:text-lg">
-                check out my projects 
+                    Check out my projects
                 </span>
             </span>
         </Link>
