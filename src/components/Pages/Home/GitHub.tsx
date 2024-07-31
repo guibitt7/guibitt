@@ -15,7 +15,7 @@ export function GitHub({ className }: GitHubProps) {
             href={github_url}
             target="_blank"
             rel="noopener noreferrer"
-            className={`relative h-44 w-full glow flex rounded-md backdrop-blur hover:brightness-90 ${className}`}
+            className={`relative h-48 w-full glow flex rounded-md backdrop-blur hover:brightness-90 ${className}`}
         >
             <Image
                 fill

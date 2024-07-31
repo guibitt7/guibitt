@@ -14,6 +14,9 @@ interface LanyardProps extends ComponentProps<"div"> {
   }
   
     function getMinuteAndSeconds(date: Date) {
+        if (!(date instanceof Date) || isNaN(date.getTime())) {
+        return "00:00";
+        }
         return date.toLocaleTimeString(navigator.language, {
         minute: "2-digit",
         second: "2-digit",
@@ -34,13 +37,14 @@ interface LanyardProps extends ComponentProps<"div"> {
 
       
     const elapsedTime = (startTime: number | undefined) => {
-        if (startTime === undefined) return "00:00";
+        if (startTime === undefined) return "00:00:00";
         
-    const now = new Date().getTime();
-    const elapsed = now - startTime;
-    const minutes = Math.floor(elapsed / 60000);
-    const seconds = Math.floor((elapsed % 60000) / 1000);
-    return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+        const now = new Date().getTime();
+        const elapsed = now - startTime;
+        const hours = Math.floor(elapsed / 3600000);
+        const minutes = Math.floor((elapsed % 3600000) / 60000);
+        const seconds = Math.floor((elapsed % 60000) / 1000);
+        return `${hours}:${minutes < 10 ? '0' : ''}${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
     };
         
     useEffect(() => {
@@ -82,13 +86,14 @@ interface LanyardProps extends ComponentProps<"div"> {
     }, [spotify]);
 
     return (
-        <div className={twMerge("h-44 w-full relative select-none p-4 hue-rotate-15 backdrop-blur font-mclaren rounded-md", props.className)}>
+        <div className={twMerge("h-48 w-full relative select-none p-4 backdrop-blur font-mclaren rounded-md", props.className)}>
         <div className="flex w-full flex-col">
-            <h2 className="mb-2 select-none text-center text-lg font-bold text-violet-200 sm:text-xl md:text-left">
+            <h2 className="mb-2 select-none glow text-center text-lg font-bold text-violet-200 sm:text-xl md:text-left">
             What I’m doing now
             </h2>
 
-            {vscodeActivity ? (
+            {
+            vscodeActivity ? (
             <div className="flex flex-col gap-2">
                 <div className="flex items-center gap-4">
                 <Image
@@ -105,7 +110,7 @@ interface LanyardProps extends ComponentProps<"div"> {
                     <p className={`text-base text-violet-200 opacity-80`}>
                     {shouldDisplayTimestamp
                         ? `Time spent: ${elapsedTime(vscodeActivity.timestamps?.start)}`
-                        : "Time spent: 00:00"
+                        : "Time spent: 00:00:00"
                     }
                     </p>
                 </div>
@@ -123,7 +128,7 @@ interface LanyardProps extends ComponentProps<"div"> {
                     alt="album cover"
                 />
                 <div className="flex flex-col justify-center">
-                    <h2 className="truncate text-xl font-semibold leading-tight text-pink-100">
+                    <h2 className="truncate text-base font-semibold leading-tight text-pink-100">
                     {spotify.song}
                     </h2>
                     <h4 className="truncate text-sm leading-tight text-pink-100 opacity-80">
@@ -150,11 +155,31 @@ interface LanyardProps extends ComponentProps<"div"> {
                 </div>
             </div>
             ) : (
-            <h2 className="mt-2 w-full select-none text-center text-base font-bold tracking-tighter text-pink-200 sm:text-lg">
-                No activity available
-            </h2>
+                <div className="relative flex flex-col items-center justify-center h-full w-full">
+                
+                    <h2 className="w-full select-none text-center text-base font-bold tracking-tighter text-violet-200 sm:text-lg">
+                        I’m offline, probably I’m on the court or I’m sleeping
+                    </h2>
+                    <div aria-hidden className="absolute inset-1 flex items-center justify-center">
+                        <div className="absolute translate-y-[14px]">
+                            <span className="block h-16 w-16 animate-ping rounded-full bg-violet-300 duration-1000" />
+                        </div>
+                    </div>
+                    
+                    <div className="relative flex items-center justify-center mt-1">
+                        <div className="relative h-16 w-16 border-2 rounded-full border-violet-200/70 ">
+                            <Image
+                                src="/trunksfogao.jpg"
+                                layout="fill"
+                                objectFit="cover"
+                                className="rounded-full bg-gray-300 backdrop-blur opacity-80"
+                                alt="offline"
+                            />
+                        </div>
+                    </div>
+                </div>
             )}
-        </div>
+            </div>
         </div>
     );
 }
