@@ -18,14 +18,14 @@ import {
     SiVite,
     SiVisualstudiocode,
     SiPhpstorm,
-    SiLinux
+    SiUbuntu
 } from "react-icons/si";
 
 export function Technologies(){
     return(
-        <div className="relative h-48 select-none flex rounded-lg backdrop-blur">
+        <div className="relative h-48 select-none flex rounded-lg w-full backdrop-blur">
             <span className="absolute bottom-2 right-4 w-full -space-y-1 font-mclaren select-none text-right opacity-100">
-                <span className="display text-base font-bold glow text-pink-200 sm:block md:text-lg">
+                <span className="display text-base font-bold glow text-violet-200 sm:block md:text-lg">
                     some of my knowlege
                 </span>
             </span>
@@ -46,7 +46,7 @@ export function Technologies(){
             <IconStyle Component={SiVite} tooltip="Vite" />
             <IconStyle Component={SiVisualstudiocode} tooltip="Visual Studio Code" />
             <IconStyle Component={SiPhpstorm} tooltip="PhpStorm" />
-            <IconStyle Component={SiLinux} tooltip="Linux" />
+            <IconStyle Component={SiUbuntu} tooltip="Ubuntu" />
             </div>
         </div>
     );

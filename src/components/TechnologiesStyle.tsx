@@ -22,7 +22,7 @@ export function IconStyle({ tooltip, className = "", Component }: IconProps) {
         <Component
           className={twMerge(
             className,
-            "h-7 w-7 text-violet-100 glow-icon opacity-100 transition duration-300 ease-in-out transform hover:scale-110 hover:text-violet-100 hover:opacity-100 md:h-8 md:w-8",
+            "h-7 w-7 text-violet-200 glow-icon opacity-100 transition duration-300 ease-in-out transform hover:scale-110 hover:text-violet-100 hover:opacity-100 md:h-8 md:w-8",
           )}
         />
       </span>

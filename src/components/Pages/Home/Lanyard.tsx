@@ -99,8 +99,8 @@ interface LanyardProps extends ComponentProps<"div"> {
                 <Image
                     src={imageUrl} 
                     alt="Code Language"
-                    width={94}
-                    height={94} 
+                    width={80}
+                    height={80} 
                     className="rounded-lg"
                 />
                 <div>
@@ -148,7 +148,7 @@ interface LanyardProps extends ComponentProps<"div"> {
                     />
                 </div>
 
-                <div className="mt-1 flex items-center justify-between px-0.5 text-sm text-pink-100">
+                <div className="mt-1 flex items-center justify-between px-0.5 text-sm text-violet-100">
                     {elapsed ? <span>{getMinuteAndSeconds(elapsed)}</span> : <span>00:00</span>}
                     {duration ? <span>{getMinuteAndSeconds(duration)}</span> : <span>00:00</span>}
                 </div>
@@ -170,8 +170,8 @@ interface LanyardProps extends ComponentProps<"div"> {
                         <div className="relative h-16 w-16 border-2 rounded-full border-violet-200/70 ">
                             <Image
                                 src="/trunksfogao.jpg"
-                                layout="fill"
-                                objectFit="cover"
+                                fill
+                                sizes="100"
                                 className="rounded-full bg-gray-300 backdrop-blur opacity-80"
                                 alt="offline"
                             />

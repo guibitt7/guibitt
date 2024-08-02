@@ -31,11 +31,11 @@ export function Time() {
         sizes="100"
         quality={90}
         src={imageSrc}
-        className="z-10 w-full select-none rounded-md object-cover opacity-70"
+        className="w-full select-none rounded-md object-cover opacity-70"
         alt={altText}
       />
 
-      <div className="z-20 select-none text-center font-semibold text-violet-200">
+      <div className="z-40 select-none text-center font-semibold text-violet-200">
         <h2 className="text-2xl">
           {hours}
           <span className="">:</span>

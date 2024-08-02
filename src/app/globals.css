@@ -91,5 +91,30 @@ body {
   filter: drop-shadow(0 0 5px rgba(231, 190, 255, 0.7));
 }
 
+/* estilos globais ou em um arquivo CSS separado */
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.image {
+  transition: opacity 0.5s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.image-hidden {
+  opacity: 0;
+}
+
+.image-visible {
+  opacity: 1;
+}
+
+
 
 

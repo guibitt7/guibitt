@@ -22,13 +22,13 @@ export function GitHub({ className }: GitHubProps) {
                 sizes="100"
                 quality={10}
                 src={"/coding.webp"}
-                className="w-full select-none rounded-md bg-gray-300 object-cover object-bottom opacity-90"
-                alt="coding gif"
+                className="w-full select-none rounded-lg object-cover object-bottom opacity-90"
+                alt="coding"
             />
             <BsGithub className="absolute top-4 right-4 text-3xl glow-icon" />
 
             <span className="absolute bottom-2 sm:top-4 left-4 w-full -space-y-1 font-mclaren select-none text-left">
-                <span className="display text-base font-bold text-pink-200 sm:block md:text-lg">
+                <span className="display text-base font-bold text-violet-200 sm:block md:text-lg">
                     Check out my projects
                 </span>
             </span>

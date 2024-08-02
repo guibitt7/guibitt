@@ -27,7 +27,7 @@ export function Resume({tooltip}: ResumeProps & HTMLProps<HTMLAnchorElement>) {
                   sizes="100"
                   quality={90}
                   src="/resume1.svg"
-                  className="z-10 w-full select-none opacity-80"
+                  className="z-10 w-full select-none absolute opacity-80"
                   alt="{}"
                 />
               </a>
