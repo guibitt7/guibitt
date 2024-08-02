@@ -35,10 +35,10 @@ export default function Home() {
       </div>
       <div className="col-span-12 sm:col-span-6 self-start">
         <Technologies />
+        <Setup />
       </div>
 
       <div className="sm:col-span-6 ">
-        <Setup />
       </div>
 
     </Main>

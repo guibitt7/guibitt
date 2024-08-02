@@ -22,14 +22,14 @@ export function Resume({tooltip}: ResumeProps & HTMLProps<HTMLAnchorElement>) {
           <div className="center relative flex h-full items-center justify-center backdrop-blur rounded-lg">
             <Link href="/Assets/Curriculo.pdf" legacyBehavior>
               <a target="_blank" rel="noopener noreferrer">
-                <Image
-                  fill
-                  sizes="100"
-                  quality={90}
-                  src="/resume1.svg"
-                  className="z-10 w-full select-none absolute opacity-80"
-                  alt="{}"
-                />
+              <Image
+                fill
+                sizes="100"
+                quality={90}
+                src="/resume1.svg"
+                className="z-10 w-full select-none absolute opacity-80"
+                alt="{}"
+              />
               </a>
             </Link>
           </div>

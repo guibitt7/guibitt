@@ -11,41 +11,36 @@ export default function Model() {
   const { actions } = useAnimations(animations, scene)
   
   const [isDragging, setIsDragging] = useState(false)
-  const [lastMouse, setLastMouse] = useState({ x: 0, y: 0 })
-  const [rotation, setRotation] = useState({ x: 0, y: 0 })
+  const [lastMouse, setLastMouse] = useState({ x: 0.4, y: -0.4 })
+  const [rotation, setRotation] = useState({ x: 0.4, y: -0.4 })
 
-  // Start the animation when the component mounts
   useEffect(() => {
     if (actions["Animation"]) {
-      actions["Animation"].play().setLoop(LoopRepeat, Infinity) // Ensure the animation loops indefinitely
+      actions["Animation"].play().setLoop(LoopRepeat, Infinity) 
     }
   }, [actions])
 
-  // Handle mouse down event to start dragging
   const handlePointerDown = (event: any) => {
     setIsDragging(true)
     setLastMouse({ x: event.clientX, y: event.clientY })
   }
 
-  // Handle mouse move event to update rotation
   const handlePointerMove = (event: any) => {
     if (isDragging) {
       const deltaX = event.clientX - lastMouse.x
       const deltaY = event.clientY - lastMouse.y
       setRotation((prevRotation) => ({
-        x: prevRotation.x + deltaY * 0.002,  // Adjusted sensitivity
-        y: prevRotation.y + deltaX * 0.002,  // Adjusted sensitivity
+        x: prevRotation.x + deltaY * 0.001,  
+        y: prevRotation.y + deltaX * 0.001,  
       }))
       setLastMouse({ x: event.clientX, y: event.clientY })
     }
   }
 
-  // Handle mouse up event to stop dragging
   const handlePointerUp = () => {
     setIsDragging(false)
   }
 
-  // Add event listeners for dragging
   useEffect(() => {
     window.addEventListener('mousemove', handlePointerMove)
     window.addEventListener('mouseup', handlePointerUp)
@@ -55,7 +50,6 @@ export default function Model() {
     }
   }, [isDragging])
 
-  // Update the rotation of the object
   useFrame(() => {
     if (group.current) {
       group.current.rotation.x = rotation.x
@@ -67,7 +61,7 @@ export default function Model() {
     <group
       ref={group}
       onPointerDown={handlePointerDown}
-      scale={[4, 4, 4]} // Scale the model to be larger
+      scale={[1.5, 1.2, 1.5]} 
     >
       <primitive object={scene} />
     </group>

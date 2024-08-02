@@ -12,11 +12,14 @@ function Loader() {
 
 export default function Setup() {
   return (
-    <Canvas gl={{ antialias: true }} dpr={[1, 1.5]} className="relative h-svh">
-      <directionalLight position={[-5, -5, 5]} intensity={4} />
-      <Suspense fallback={<Loader />}>
-        <Model />
-      </Suspense>
-    </Canvas>
+    <div className=" h-[500px]"> 
+      <Canvas gl={{ antialias: true }} dpr={[6, 6]} className="relative h-full">
+        <directionalLight position={[5, 5, -5]} intensity={3} />
+        <Suspense fallback={<Loader />}>
+          <Model />
+        </Suspense>
+      </Canvas>
+    </div>
+
   )
 }

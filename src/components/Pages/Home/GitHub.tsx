@@ -20,7 +20,7 @@ export function GitHub({ className }: GitHubProps) {
             <Image
                 fill
                 sizes="100"
-                quality={10}
+                quality={75}
                 src={"/coding.webp"}
                 className="w-full select-none rounded-lg object-cover object-bottom opacity-90"
                 alt="coding"
