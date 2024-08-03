@@ -4,9 +4,9 @@ export function Backgorund() {
       <div
         className="bg fixed h-screen w-full"
         style={{
-          opacity: 0.5,
+          opacity: 0.4,
           backgroundSize: "cover",
-          backgroundImage: "url('/bg.jpg')",
+          backgroundImage: "url('/bg5.jpg')",
           backgroundRepeat: "repeat",
           backgroundPosition: "center",
         }}

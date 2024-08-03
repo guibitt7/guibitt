@@ -13,4 +13,12 @@ export const instagram_url = "https://instagram.com/guibi.tt";
 export const email_url = "";
 
 
+export const project = [
+  {
+    name: "teste"
+
+  }
+]
+
+
 

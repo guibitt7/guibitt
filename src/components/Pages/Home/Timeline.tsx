@@ -27,7 +27,7 @@ export function Timeline() {
                     sizes="100"
                     quality={100}
                     priority={true}
-                    src="/aboutme.png"
+                    src="/aboutme1.png"
                     className={`image ${isHovered ? 'image-visible' : 'image-hidden'}`}
                     alt="timeline photo"
                     placeholder="empty"

@@ -86,7 +86,7 @@ interface LanyardProps extends ComponentProps<"div"> {
     }, [spotify]);
 
     return (
-        <div className={twMerge("h-48 w-full relative select-none p-4 backdrop-blur font-mclaren rounded-md", props.className)}>
+        <div className={twMerge("h-48 w-full relative select-none p-4  font-mclaren rounded-md", props.className)}>
         <div className="flex w-full flex-col">
             <h2 className="mb-2 select-none glow text-center text-lg font-bold text-violet-200 sm:text-xl md:text-left">
             What I’m doing now
@@ -128,27 +128,27 @@ interface LanyardProps extends ComponentProps<"div"> {
                     alt="album cover"
                 />
                 <div className="flex flex-col justify-center">
-                    <h2 className="truncate text-base font-semibold leading-tight text-pink-100">
+                    <h2 className="truncate text-base font-semibold leading-tight text-violet-100">
                     {spotify.song}
                     </h2>
-                    <h4 className="truncate text-sm leading-tight text-pink-100 opacity-80">
+                    <h4 className="truncate text-sm leading-tight text-violet-100 opacity-80">
                     by {spotify.artist}
                     </h4>
-                    <h4 className="truncate text-sm leading-tight text-pink-100 opacity-80">
+                    <h4 className="truncate text-sm leading-tight text-violet-100 opacity-80">
                     on {spotify.album}
                     </h4>
                 </div>
                 </div>
 
                 <div className="mt-4 w-full">
-                <div className="relative h-2 w-full rounded-md bg-pink-200/20">
+                <div className="relative h-2 w-full">
                     <span
-                    className="absolute h-2 rounded-md bg-pink-200/70"
+                    className="absolute h-2 rounded-md bg-violet-200/70"
                     style={{ width: `${progress}%` }}
                     />
                 </div>
 
-                <div className="mt-1 flex items-center justify-between px-0.5 text-sm text-violet-100">
+                <div className="mt-1 flex items-center justify-between px-0.5 text-sm text-violet-200">
                     {elapsed ? <span>{getMinuteAndSeconds(elapsed)}</span> : <span>00:00</span>}
                     {duration ? <span>{getMinuteAndSeconds(duration)}</span> : <span>00:00</span>}
                 </div>
