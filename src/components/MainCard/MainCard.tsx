@@ -46,7 +46,7 @@ export function MainCard({...props}: ComponentProps<"div">) {
               </span>
             </p>
 
-            <hr className="w-[95%] border-t border-t-violet-300/50 opacity-80 md:-ml-5 md:block md:w-full mt-6" />
+            <hr className="w-[95%] border-t border-t-violet-300/50 opacity-80 md:-ml-5 md:block md:w-full md:mt-6 mt-3" />
             <SocialLinks />
         </div>
       </section>

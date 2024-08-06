@@ -91,7 +91,6 @@ body {
   filter: drop-shadow(0 0 5px rgba(231, 190, 255, 0.7));
 }
 
-/* estilos globais ou em um arquivo CSS separado */
 .image-container {
   position: relative;
   width: 100%;
@@ -115,6 +114,13 @@ body {
   opacity: 1;
 }
 
+.glow-tech {
+  filter: drop-shadow(0 5 5px rgba(217, 152, 255, 0.7));
+  transition: filter 0.3s ease-in-out;
+}
 
+.glow-tech:hover {
+  filter: drop-shadow(0 0 15px rgb(219, 156, 255));
+}
 
 
