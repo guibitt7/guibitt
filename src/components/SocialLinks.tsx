@@ -12,7 +12,7 @@ import {
 
 export function SocialLinks() {
     return (
-      <div className="relative flex w-full flex-row items-center justify-center gap-4 pt-0.5">
+      <div className="relative flex w-full flex-row items-center justify-center gap-4 md:pt-0.5 pt-0">
         <IconLink id="icon-linkedin" tooltip="Linkedin" href={linkedin_url} src="/Icons/linkedin_icon.png" />
         <IconLink id="icon-github" tooltip="Github" href={github_url} src="/Icons/github_icon.png" />
         <IconLink id="icon-email" tooltip="Email" href={email_url} src="/Icons/email_icon.png" />

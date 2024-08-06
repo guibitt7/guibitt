@@ -8,7 +8,7 @@ export function Timeline() {
     return (
         <div className="relative w-full flex justify-center select-none sm:h-[740px] h-[570px]">
             <div
-                className="relative sm:w-[360px] h-[560px] w-[280px] sm:h-[720px] image-container"
+                className="relative sm:w-[360px] h-[500px] w-[210px] sm:h-[720px] image-container"
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
             >

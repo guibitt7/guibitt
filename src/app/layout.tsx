@@ -6,7 +6,7 @@ import { Backgorund } from "@/components/Background";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "<gui.sh>",
+  title: "<guibitt>",
   description: "FullStack developer and a Software Engineering student.",
 };
 

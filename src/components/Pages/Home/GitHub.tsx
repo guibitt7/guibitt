@@ -24,6 +24,7 @@ export function GitHub({ className }: GitHubProps) {
                 src={"/coding.webp"}
                 className="w-full select-none rounded-lg object-cover object-bottom opacity-90"
                 alt="coding"
+                unoptimized
             />
             <BsGithub className="absolute top-4 right-4 text-3xl glow-icon" />
 
