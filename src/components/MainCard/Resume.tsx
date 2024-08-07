@@ -20,7 +20,7 @@ export function Resume({tooltip}: ResumeProps & HTMLProps<HTMLAnchorElement>) {
           delay={[0, 50]}
         >
           <div className="center relative flex h-full items-center justify-center">
-            <Link href="/Assets/Curriculo.pdf" legacyBehavior>
+            <Link href="/Assets/CurriculoGuibitt.pdf" legacyBehavior>
               <a target="_blank" rel="noopener noreferrer">
               <Image
                 fill
