@@ -25,17 +25,20 @@ function formatMinutesAndSeconds(elapsed: number) {
     return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
 }
 
-export function Lanyard({hideTimestamp = false, ...props }: LanyardProps) {
+export function Lanyard({ hideTimestamp = false, ...props }: LanyardProps) {
     const [elapsed, setElapsed] = useState<Date | undefined>();
     const user = useLanyardWS(USER_ID as Snowflake);
 
     const vscodeActivity = user?.activities?.find(activity => activity.name === "Visual Studio Code") || null;
+    const phpstormActivity = user?.activities?.find(activity => activity.name === "PhpStorm") || null;
 
     const imageUrl = vscodeActivity?.assets?.large_image
         ? `https://cdn.discordapp.com/app-assets/${vscodeActivity.application_id}/${vscodeActivity.assets.large_image}.webp`
+        : phpstormActivity?.assets?.small_image
+        ? `https://cdn.discordapp.com/app-assets/${phpstormActivity.application_id}/${phpstormActivity.assets.small_image}.webp`
         : "/day.jpg";
 
-    const shouldDisplayTimestamp = vscodeActivity?.timestamps?.start && !hideTimestamp;
+    const shouldDisplayTimestamp = (vscodeActivity?.timestamps?.start || phpstormActivity?.timestamps?.start) && !hideTimestamp;
 
     const elapsedTime = (startTime: number | undefined) => {
         if (startTime === undefined) return "00:00:00";
@@ -44,13 +47,13 @@ export function Lanyard({hideTimestamp = false, ...props }: LanyardProps) {
 
     useEffect(() => {
         let interval: NodeJS.Timeout;
-        if (vscodeActivity?.timestamps?.start) {
+        if (vscodeActivity?.timestamps?.start || phpstormActivity?.timestamps?.start) {
             interval = setInterval(() => {
                 setElapsed(new Date(Date.now()));
             }, 1000);
         }
         return () => clearInterval(interval);
-    }, [vscodeActivity]);
+    }, [vscodeActivity, phpstormActivity]);
 
     const spotify = user?.spotify;
     const duration = spotify?.timestamps
@@ -103,6 +106,29 @@ export function Lanyard({hideTimestamp = false, ...props }: LanyardProps) {
                                 <p className={`text-base text-violet-200 opacity-80`}>
                                     {shouldDisplayTimestamp
                                         ? `Time spent: ${elapsedTime(vscodeActivity.timestamps?.start)}`
+                                        : "Time spent: 00:00:00"
+                                    }
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                ) : phpstormActivity ? (
+                    <div className="flex flex-col gap-2">
+                        <div className="flex items-center gap-4">
+                            <Image
+                                src={imageUrl}
+                                alt="Code Language"
+                                width={80}
+                                height={80}
+                                className="rounded-lg"
+                            />
+                            <div>
+                                <h3 className="truncate text-xl font-semibold leading-tight text-violet-100">
+                                    {phpstormActivity.details || "Unknown Activity"}
+                                </h3>
+                                <p className={`text-base text-violet-200 opacity-80`}>
+                                    {shouldDisplayTimestamp
+                                        ? `Time spent: ${elapsedTime(phpstormActivity.timestamps?.start)}`
                                         : "Time spent: 00:00:00"
                                     }
                                 </p>
@@ -172,4 +198,5 @@ export function Lanyard({hideTimestamp = false, ...props }: LanyardProps) {
         </div>
     );
 }
+
 
