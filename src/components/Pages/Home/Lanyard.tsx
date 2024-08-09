@@ -36,7 +36,7 @@ export function Lanyard({ hideTimestamp = false, ...props }: LanyardProps) {
         ? `https://cdn.discordapp.com/app-assets/${vscodeActivity.application_id}/${vscodeActivity.assets.large_image}.webp`
         : phpstormActivity?.assets?.small_image
         ? `https://cdn.discordapp.com/app-assets/${phpstormActivity.application_id}/${phpstormActivity.assets.small_image}.webp`
-        : "/day.jpg";
+        : "https://i.gifer.com/origin/08/0885b05bb311d9855111c2366d5633c4_w200.gif";
 
     const shouldDisplayTimestamp = (vscodeActivity?.timestamps?.start || phpstormActivity?.timestamps?.start) && !hideTimestamp;
 
