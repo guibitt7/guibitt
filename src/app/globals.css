@@ -115,12 +115,12 @@ body {
 }
 
 .glow-tech {
-  filter: drop-shadow(0 5 5px rgba(217, 152, 255, 0.7));
+  filter: drop-shadow(0 5 5px rgba(152, 205, 255, 0.7));
   transition: filter 0.3s ease-in-out;
 }
 
 .glow-tech:hover {
-  filter: drop-shadow(0 0 15px rgb(219, 156, 255));
+  filter: drop-shadow(0 0 15px rgb(156, 235, 255));
 }
 
 
@@ -129,11 +129,11 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-  background: rgba(217, 152, 255, 0.7);      
+  background: rgba(152, 205, 255, 0.7);      
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: rgb(219, 156, 255);    
+  background-color: rgb(156, 235, 255);    
   border-radius: 20px;       
-  border: 3px solid rgba(217, 152, 255, 0.7);  
+  border: 3px solid rgba(152, 205, 255, 0.7);  
 }

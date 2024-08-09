@@ -23,7 +23,7 @@ import {
 
 export function Technologies(){
     return(
-        <div className="relative h-48 select-none flex w-full">
+        <div className="relative h-48 select-none flex w-full backdrop-blur rounded-lg hue-rotate-15">
             <span className="absolute bottom-2 right-4 w-full -space-y-1 font-mclaren select-none text-right opacity-100">
                 <span className="display text-base font-bold glow text-violet-200 sm:block md:text-lg">
                     some of my knowlege

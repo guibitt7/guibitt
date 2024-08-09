@@ -21,8 +21,8 @@ export function GitHub({ className }: GitHubProps) {
                 fill
                 sizes="100"
                 quality={75}
-                src={"/coding.webp"}
-                className="w-full select-none rounded-lg object-cover object-bottom opacity-90"
+                src={"https://i.pinimg.com/originals/c8/4f/b7/c84fb740471d58ba9597ace28969d490.gif"}
+                className="w-full select-none rounded-lg object-cover object-bottom opacity-30"
                 alt="coding"
                 unoptimized
             />

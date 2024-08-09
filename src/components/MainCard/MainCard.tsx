@@ -7,7 +7,7 @@ import { SocialLinks } from "../SocialLinks";
 export function MainCard({...props}: ComponentProps<"div">) {
     return (
       <section className={twMerge(
-        "relative flex h-56 w-full flex-row gap-2 glow rounded-lg ",
+        "relative flex h-56 w-full flex-row gap-2 glow rounded-lg backdrop-blur hue-rotate-15",
         props.className
       )}>
         <div className={twMerge(

@@ -29,8 +29,8 @@ export default async function Projects() {
 
             <div className="col-span-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8 p-4 justify-center">
                 {projects.map((project, index) => (
-                    <div key={index} className="opacity-100 mb-0 flex justify-center">
-                        <div className="w-full max-w-xs md:max-w-sm md:h-[530px] h-[580px] rounded-xl flex flex-col bg-violet-100/40 p-4">
+                    <div key={index} className="mb-0 flex justify-center">
+                        <div className="w-full max-w-xs md:max-w-sm md:h-[530px] h-[580px] rounded-xl flex flex-col p-4 backdrop-blur hue-rotate-15">
                             <div className="flex gap-2 mb-2">
                                 <section className="w-3 h-3 rounded-full bg-red-500"></section>
                                 <section className="w-3 h-3 rounded-full bg-yellow-500"></section>

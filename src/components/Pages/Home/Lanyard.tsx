@@ -84,7 +84,7 @@ export function Lanyard({ hideTimestamp = false, ...props }: LanyardProps) {
     }, [spotify]);
 
     return (
-        <div className={twMerge("h-48 w-full relative select-none p-4 font-mclaren rounded-md", props.className)}>
+        <div className={twMerge("h-48 w-full relative select-none p-4 font-mclaren rounded-lg backdrop-blur hue-rotate-15", props.className)}>
             <div className="flex w-full flex-col">
                 <h2 className="mb-2 select-none glow text-center text-lg font-bold text-violet-200 sm:text-xl md:text-left">
                     What I’m doing now

@@ -25,7 +25,7 @@ export function Time() {
   const altText = isNight ? "Night time" : "Day time";
 
   return (
-    <div className="relative flex h-full items-center justify-center rounded-lg">
+    <div className="relative flex h-full items-center justify-center rounded-lg hue-rotate-15">
       <Image
         fill
         sizes="100"
