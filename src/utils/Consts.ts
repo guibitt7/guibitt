@@ -70,6 +70,10 @@ export const projects = [
         label: "Docker",
         icon: "/Tech/Docker.png"
       },
+      {
+        label: "React",
+        icon: "/Tech/React.png"  
+      },
     ],
     cover: "/Projects/inprogress.jpg",
     link: "#"
