@@ -47,10 +47,6 @@ export const projects = [
     status: "In Progress",
     technologies: [
       {
-        label: "PHP",
-        icon: "/Tech/PHP.png"
-      },
-      {
         label: "Laravel",
         icon: "/Tech/Laravel.png"
       },
@@ -74,6 +70,10 @@ export const projects = [
         label: "React",
         icon: "/Tech/React.png"  
       },
+      {
+        label: "TailwindCSS",
+        icon: "/Tech/Tailwind CSS.png"
+      },  
     ],
     cover: "/Projects/inprogress.jpg",
     link: "#"
