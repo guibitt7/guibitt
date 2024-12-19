@@ -42,7 +42,7 @@ export function MainCard({...props}: ComponentProps<"div">) {
             )}>
               <span className="">I’m a fullstack developer from Brazil</span>
               <span className="text-sm opacity-70 md:text-xs mt-0.5">
-              I’m a Software Engineering student currently wrapping up my final year.
+              I’m a Software Engineer ready to create impactful solutions.
               </span>
             </p>
 

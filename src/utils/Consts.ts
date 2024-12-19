@@ -43,7 +43,7 @@ export const projects = [
   },
   {
     name: "TCC(Final Paper)",
-    description: "I’m creating a mobile app for managing a university athletic association. Using Laravel for the API and Flutter for the interface, the app will improve student engagement and participation in extracurricular activities. It covers API setup, user authentication, and features like member registration and event viewing.",
+    description: "I’m creating a mobile app for managing a university athletic association. Using Laravel for the API and Flutter for the interface, the app will improve student engagement and participation in extracurricular activities. In Progress. I’ve completed most of the project, and the next step is implementing the payment feature to finalize and launch the app.",
     status: "In Progress",
     technologies: [
       {
@@ -59,6 +59,10 @@ export const projects = [
         icon: "/Tech/Flutter.png"
       },
       {
+        label: "React",
+        icon: "/Tech/React.png"
+      },
+      {
         label: "PostgreSQL",
         icon: "/Tech/PostgresSQL.png"
       },
@@ -71,7 +75,7 @@ export const projects = [
         icon: "/Tech/Docker.png"
       },
     ],
-    cover: "/Projects/inprogress.jpg",
+    cover: "/Projects/UnicaoPortifolio.png",
     link: "#"
   },
   {

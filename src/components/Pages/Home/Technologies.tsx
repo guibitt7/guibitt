@@ -18,7 +18,8 @@ import {
     SiVite,
     SiVisualstudiocode,
     SiPhpstorm,
-    SiUbuntu
+    SiUbuntu,
+    SiPython
 } from "react-icons/si";
 
 export function Technologies(){
@@ -38,6 +39,7 @@ export function Technologies(){
             <IconStyle Component={SiNextdotjs} tooltip="Next.js" />
             <IconStyle Component={SiTailwindcss} tooltip="Tailwind CSS" />
             <IconStyle Component={SiFlutter} tooltip="Flutter" />
+            <IconStyle Component={SiPython} tooltip="Python" />
             <IconStyle Component={SiPostgresql} tooltip="PostgreSQL" />
             <IconStyle Component={SiDocker} tooltip="Docker" />
             <IconStyle Component={SiPostman} tooltip="Postman" />
