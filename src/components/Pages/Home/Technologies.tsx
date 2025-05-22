@@ -19,7 +19,9 @@ import {
     SiVisualstudiocode,
     SiPhpstorm,
     SiUbuntu,
-    SiPython
+    SiPython,
+    SiMongodb,
+    SiDjango
 } from "react-icons/si";
 
 export function Technologies(){
@@ -40,6 +42,8 @@ export function Technologies(){
             <IconStyle Component={SiTailwindcss} tooltip="Tailwind CSS" />
             <IconStyle Component={SiFlutter} tooltip="Flutter" />
             <IconStyle Component={SiPython} tooltip="Python" />
+            <IconStyle Component={SiDjango} tooltip="Django" />
+            <IconStyle Component={SiMongodb} tooltip="MongoDB" />
             <IconStyle Component={SiPostgresql} tooltip="PostgreSQL" />
             <IconStyle Component={SiDocker} tooltip="Docker" />
             <IconStyle Component={SiPostman} tooltip="Postman" />

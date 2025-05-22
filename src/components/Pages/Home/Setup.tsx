@@ -3,7 +3,7 @@
 import { Canvas } from "@react-three/fiber"
 import { Suspense } from "react"
 import { Html, useProgress } from "@react-three/drei"
-import Model from "@/components/Model"  // Certifique-se de que o caminho está correto
+import Model from "@/components/Model"  
 
 function Loader() {
   const { progress } = useProgress()
